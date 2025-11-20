@@ -29,6 +29,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+function openDrawer() {
+  document.getElementById("drawer").style.width = "250px";
+  document.body.classList.add("drawer-open");
+}
+
+function closeDrawer() {
+  document.getElementById("drawer").style.width = "0";
+  document.body.classList.remove("drawer-open");
+}
+
+// Close drawer when clicking outside
+window.addEventListener("click", function(event) {
+  const drawer = document.getElementById("drawer");
+  const menuIcon = document.querySelector(".menu-icon");
+
+  // Check if click was outside the drawer and not on the menu icon
+  if (drawer.style.width === "250px" && 
+      !drawer.contains(event.target) &&
+      !menuIcon.contains(event.target)) {
+    closeDrawer();
+  }
+});
+
 
 // =========================
 // Register + Login Redirect Logic

@@ -1,39 +1,6 @@
-.page-container {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 2rem;
-    padding: 20px;
-}
+/* toa comments */
 
-.sidebar{
-    background: #00A650;
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
-}
 
-.sidebar ul{
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar li{
-    margin: 10px 0;
-}
-
-.content-area{
-    display: grid;
-    grid-template-columns: 300px 1fr;
-}
-
-.profile-section img{
-    width: 100%;
-    border-radius: 20px;
-}
-
-.text-section{
-    line-height: 1.6;
-}
 
 * {
   margin: 0;
@@ -48,7 +15,6 @@ body {
   line-height: 1.6;
 }
 
-Navbar
 nav {
   display: flex;
   justify-content: space-between;
@@ -86,7 +52,7 @@ nav img {
 }
 
 .nav-links ul li a:hover {
-  color: #00833e;
+  color: #dbbd38;
 }
 
 .fa-bars,
@@ -98,13 +64,23 @@ nav img {
 
 /* Header */
 header {
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  padding: 60px 20px 30px;
+  padding: 60px 20px;
   background: linear-gradient(to bottom, #00A650, #00A650);
   color: white;
+  width: 100vw;
+  margin: 0;
+}
+header img{
+  width:900px;
+  height: 500px;
 }
 
 header h1 {
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
@@ -133,13 +109,21 @@ header h1 {
 .text-box {
   text-align: center;
   background-color: #00833e;
-  color: white;
+  color: black;
   padding: 30px 20px;
+}
+a {
+  color: white;
+}
+.hero a{
+  color: white;
+  text-decoration: none;
 }
 
 .text-box h2 {
   font-size: 2rem;
   margin-bottom: 10px;
+  text-decoration: underline;
 }
 
 /* Footer */
@@ -290,7 +274,7 @@ body {
 /* ===== NAVBAR (Top Nav) ===== */
 nav {
   width: 100%;
-  background: #00843d; /* Egerton green */
+  background: #00A650; /* Egerton green */
   padding: 12px 30px;
   display: flex;
   align-items: center;
@@ -483,4 +467,42 @@ p a {
   .content-area {
     width: 100%;
   }
+}
+
+
+.page-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    padding: 20px;
+}
+
+.sidebar{
+    background: #00A650;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
+
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li{
+    margin: 10px 0;
+}
+
+.content-area{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.profile-section img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.text-section{
+    line-height: 1.6;
 }
