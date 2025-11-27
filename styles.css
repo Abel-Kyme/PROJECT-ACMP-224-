@@ -1,508 +1,533 @@
-/* toa comments */
-
-
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  background-color: #f7f7f7;
-  color: #222;
-  line-height: 1.6;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-  background-color: #00A650;
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav img {
-  width: 80px;
-  height: auto;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.nav-links ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-.nav-links ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links ul li a:hover {
-  color: #dbbd38;
-}
-
-.fa-bars,
-.fa-xmark {
-  display: none;
-  cursor: pointer;
-  font-size: 1.8em;
-}
-
-/* Header */
-header {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(to bottom, #00A650, #00A650);
-  color: white;
-  width: 100vw;
-  margin: 0;
-}
-header img{
-  width:900px;
-  height: 500px;
-}
-
-header h1 {
-  width: 100vw;
-  background-position: center;
-  background-size: cover;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-/* Home section */
-#home {
-  padding: 40px;
-  text-align: center;
-}
-
-#home img {
-  width: 90%;
-  max-width: 800px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-#home p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-/* Text Box */
-.text-box {
-  text-align: center;
-  background-color: #00833e;
-  color: black;
-  padding: 30px 20px;
-}
-a {
-  color: white;
-}
-.hero a{
-  color: white;
-  text-decoration: none;
-}
-
-.text-box h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  text-decoration: underline;
-}
-
-/* Footer */
-footer, p a {
-  text-align: center;
-  padding: 15px;
-  color: #00833e;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Login/Register Container */
-.login-container,
-.register-container {
-  width: 90%;
-  max-width: 400px;
-  margin: 100px auto;
-  background: linear-gradient(to bottom, #b99652, #00491e);
-  padding: 30px;
-  border-radius: 10px;
-  color: white;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-}
-
-.login-container h2,
-.register-container h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-weight: 700;
-}
-
-.input-group {
-  position: relative;
-  margin-bottom: 25px;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-bottom: 2px solid white;
-  background: transparent;
-  color: white;
-  outline: none;
-}
-
-.input-group label {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: #eee;
-  pointer-events: none;
-  transition: 0.3s;
-}
-
-.input-group input:focus + label,
-.input-group input:valid + label {
-  top: -10px;
-  font-size: 0.9rem;
-  color: #3ba9e0;
-}
-
-/* Buttons */
-.login-btn,
-.register-btn {
-  width: 100%;
-  padding: 10px;
-  background-color: #3ba9e0;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.login-btn:hover,
-.register-btn:hover {
-  background-color: #259ad3;
-}
-
-/* Links */
-.register-link,
-.login-link,
-.remember-forgot {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 0.9rem;
-}
-
-.register-link a,
-.login-link a {
-  color: #3ba9e0;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.register-link a:hover,
-.login-link a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive navbar */
-@media screen and (max-width: 768px) {
-  .nav-links ul {
-    flex-direction: column;
-    background-color: #00A650;
-    position: absolute;
-    top: 70px;
-    right: -100%;
-    width: 200px;
-    text-align: right;
-    padding: 20px;
-    transition: right 0.3s;
-  }
-
-  .nav-links ul.show {
-    right: 0;
-  }
-
-  .fa-bars {
-    display: block;
-    margin-left: 15px;
-  }
-
-  .fa-xmark {
-    display: none;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-}
-
-/* ===== GLOBAL ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  background: #f4f4f4;
-  color: #222;
-  line-height: 1.6;
-}
-
-/* ===== NAVBAR (Top Nav) ===== */
-nav {
-  width: 100%;
-  background: #00A650; /* Egerton green */
-  padding: 12px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav img {
-  height: 60px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-nav ul li a {
-  color: #fff;
-  font-size: 16px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-nav ul li a i {
-  margin-right: 6px;
-}
-
-/* ===== PAGE LAYOUT ===== */
-.page-container {
-  display: flex;
-  margin: 40px auto;
-  width: 90%;
-  max-width: 1400px;
-  gap: 30px;
-}
-
-/* ===== SIDEBAR ===== */
-.sidebar {
-  width: 280px;
-  background: #00843d;
-  color: #fff;
-  padding: 25px 20px;
-  border-radius: 5px;
-  height: fit-content;
-}
-
-.sidebar h3 {
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar ul li {
-  padding: 12px 8px;
-  margin-bottom: 8px;
-  background: #0a9e4f;
-  border-radius: 3px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.sidebar ul li:hover {
-  background: #0fc462;
-}
-
-/* ===== CONTENT AREA ===== */
-.content-area {
-  flex: 1;
-  background: #fff;
-  padding: 30px;
-  border-radius: 6px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-
-.profile-section {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.profile-section img {
-  width: 280px;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 15px;
-}
-
-.profile-section h2 {
-  font-size: 26px;
-  color: #00843d;
-  font-weight: 700;
-}
-
-.profile-section p {
-  font-size: 15px;
-  color: #333;
-}
-
-.text-section h1 {
-  font-size: 28px;
-  color: #00843d;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 3px solid #dfeee7;
-  display: inline-block;
-}
-
-.text-section p {
-  margin: 15px 0;
-  font-size: 16px;
-}
-
-.text-section ol {
-  margin-left: 20px;
-  margin-top: 10px;
-}
-
-.text-section li {
-  margin-bottom: 10px;
-}
-
-/* ===== WELCOME BOX ===== */
-.text-box {
-  background: #fff;
-  width: 90%;
-  max-width: 1100px;
-  margin: 20px auto;
-  padding: 25px;
-  border-radius: 6px;
-  text-align: center;
-  box-shadow: 0 0 8px rgba(0,0,0,0.08);
-}
-
-.text-box h2 {
-  font-size: 26px;
-  color: #00843d;
-  margin-bottom: 10px;
-}
-
-/* ===== IMAGE SECTION ===== */
-#home {
-  width: 90%;
-  max-width: 1100px;
-  margin: 30px auto;
-  text-align: center;
-}
-
-#home img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 20px;
-}
-
-#home h1 {
-  font-size: 28px;
-  color: #00843d;
-  margin-bottom: 10px;
-}
-
-#home p {
-  font-size: 16px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* ===== FOOTER ===== */
-footer,
-p a {
-  text-align: center;
-  margin-top: 20px;
-  color: #00843d;
-  text-decoration: none;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .page-container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-  }
-
-  .content-area {
-    width: 100%;
-  }
-}
-
-
-.page-container {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 2rem;
-    padding: 20px;
-}
-
-.sidebar{
-    background: #00A650;
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
-}
-
-.sidebar ul{
-    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
     padding: 0;
 }
 
-.sidebar li{
-    margin: 10px 0;
-}
 
-.content-area{
-    display: grid;
-    grid-template-columns: 300px 1fr;
-}
-
-.profile-section img{
-    width: 100%;
-    border-radius: 20px;
-}
-
-.text-section{
+body {
+    font-family: var(--font-primary);
     line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #f4f4f4;
+    display: block; /* This forces elements to stack (Nav on top of Header) */
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--primary-green);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--dark-green);
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* White background for the nav bar */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--primary-green); /* Green line under the nav */
+}
+
+nav img {
+    height: 45px; 
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links ul li {
+    padding: 8px 15px;
+}
+
+.nav-links ul li a {
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.nav-links ul li a i {
+    margin-right: 5px;
+    color: var(--primary-green);
+}
+
+.nav-links ul li a:hover {
+    color: var(--primary-green);
+}
+
+
+.fa-xmark, .fa-bars {
+    display: none;
+}
+
+
+header {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 20px 20px 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1em;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+header img {
+    display: flex;
+}
+
+
+
+.page-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h3 {
+    background-color: var(--primary-green);
+    color: white;
+    font-size: 1.1em;
+    padding: 15px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 5px 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-left: 5px solid transparent;
+    transition: background-color 0.3s, border-left-color 0.3s;
+    font-size: 0.95em;
+    color: var(--text-dark);
+}
+
+.sidebar ul li:hover {
+    background-color: var(--light-green-bg);
+    border-left: 5px solid var(--primary-green);
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+/* --- 5. Main Content Area (main) --- */
+.content-area {
+    flex-grow: 1;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Dean's Profile Section */
+.profile-section {
+    display: flex;
+    align-items: flex-start; /* Aligns items to the top */
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-section img {
+    width: 250px; /* Set a fixed size for the photo */
+    height: auto;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.profile-section p {
+    color: var(--primary-green);
+    font-style: italic;
+}
+
+/* Text Boxes (About and Department) */
+.text-box {
+    margin-bottom: 30px;
+}
+
+.text-box h2 {
+    font-size: 1.4em;
+    color: var(--dark-green);
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--light-green-bg);
+    padding-bottom: 5px;
+}
+
+.text-section h1 {
+    font-size: 1.8em;
+    font-weight: 300;
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    display: inline-block; /* Keeps the border only under the text */
+}
+
+.text-section p {
+    margin-bottom: 15px;
+}
+
+.text-section ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.text-section ol li {
+    margin-bottom: 10px;
+}
+
+.text-section ol li b {
+    color: var(--dark-green);
+}
+
+/* --- 6. Footer-like Elements --- */
+#home {
+    /* Styles for the "Welcome" section at the bottom, which seems redundant/misplaced */
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--light-green-bg);
+    margin-top: 30px;
+}
+
+#home h1 {
+    font-size: 1.8em;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+#home p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-dark);
+}
+
+/* Separated Logout/Copyright list items */
+li a#logout {
+    display: block;
+    width: 150px;
+    margin: 20px auto 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f8f8f8;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-dark);
+}
+
+li a#logout:hover {
+    background-color: #f1f1f1;
+    color: #e74c3c;
+}
+
+p a[href="#"] { /* Back to Top */
+    display: block;
+    text-align: center;
+    margin: 10px 0 20px;
+    font-weight: bold;
+}
+
+.copyright { /* Correcting the raw HTML at the end */
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: var(--text-light);
+}
+
+
+/* --- 7. Responsiveness (Mobile View) --- */
+@media (max-width: 900px) {
+    /* Hide the desktop menu links */
+    .nav-links ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 65px; /* Below the nav bar */
+        right: 0;
+        background: white;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Display the mobile menu icons */
+    .fa-bars {
+        display: block;
+        font-size: 22px;
+        color: var(--primary-green);
+        cursor: pointer;
+    }
+
+    /* Main layout stacking */
+    .page-container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    /* Sidebar to take full width */
+    .sidebar {
+        width: 100%;
+        order: -1; /* Place sidebar above content on mobile */
+    }
+
+    /* Profile section stacking */
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-section img {
+        width: 70%;
+        max-width: 250px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-section h2 {
+        margin-top: 0;
+    }
+}
+/* --- CSS Variables & Global Resets --- */
+:root {
+    --primary-green: #00A650;
+    --dark-green: #008740;
+    --text-dark: #333;
+    --text-light: #666;
+    --border-color: #ddd;
+    --font-primary: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-green);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--dark-green);
+    text-decoration: underline;
+}
+
+/* --- Login Container (Card) --- */
+.login-container {
+    width: 90%;
+    max-width: 400px; /* Standard size for a login form */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 2em;
+    color: var(--primary-green);
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* --- Input Groups (Floating Labels) --- */
+.input-group {
+    position: relative;
+    margin-bottom: 30px; /* Space between input fields */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    outline: none;
+    color: var(--text-dark);
+    font-size: 1em;
+    transition: border-bottom-color 0.3s;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: var(--text-light);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+/* Floating label effect: when input is focused or has content */
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -20px;
+    font-size: 0.8em;
+    color: var(--primary-green);
+    font-weight: 500;
+}
+
+.input-group input:focus {
+    border-bottom-color: var(--primary-green);
+}
+
+/* --- Remember Me / Forgot Password --- */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label {
+    color: var(--text-dark);
+}
+
+.remember-forgot input[type="checkbox"] {
+    margin-right: 5px;
+    accent-color: var(--primary-green); /* Styles the checkbox itself */
+}
+
+/* --- Login Button --- */
+.loginBTN-cont {
+    margin-top: 30px;
+}
+
+.login-btn {
+    width: 100%;
+    height: 45px;
+    background: var(--primary-green);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: var(--dark-green);
+}
+
+/* --- Register Link --- */
+.register-link {
+    font-size: 0.9em;
+    color: var(--text-light);
+    margin-top: 25px;
+}
+
+.register-link p a {
+    font-weight: bold;
+}
+.register-container {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    text-align: center;
+    /* Ensure it centers properly if sharing the body flex styling */
+}
+
+.register-container h2 {
+    font-size: 2em;
+    color: var(--primary-green);
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* 2. The Register Button */
+.register-btn {
+    width: 100%;
+    height: 45px;
+    background: var(--primary-green);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    transition: background 0.3s;
+    margin-top: 10px; /* Space above the button */
+}
+
+.register-btn:hover {
+    background: var(--dark-green);
+}
+
+/* 3. The "Already have an account?" Link */
+/* Since this is outside the container in your HTML, we style it to float below */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95em;
+    color: var(--text-dark);
+}
+
+.login-link a {
+    font-weight: bold;
+    color: var(--primary-green);
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+/* Special layout ONLY for Login/Register pages */
+.centered-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f0f0 0%, #dddddd 100%);
 }
