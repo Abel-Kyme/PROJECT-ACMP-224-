@@ -3,73 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dean of Students</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>egertons dean's portal</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+     integrity="sha512-xXHlfX41tFe8z2v9D1Y5Zxq9YykhZPMaYlC3aKkC28yrFYm7K3i7r3c1i9W3Zq/OzVjv1C1DfF0Y+Ypsx6H3cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<script src="/interactive.js" defer></script>
+
 </head>
 <body>
-    <nav>
-      <a href="index.html"
-        ><img src="images/logo.png" alt="Egerton Logo"/></a>
-      <div class="nav-links">
-        <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
-        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-
-        <ul>
-          <li>
-            <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
-          </li>
-          </li>
-          <a href="about.html"
-              ><i class="fa-solid fa-bullhorn"></i> About Us</a>
-          </li>
-          <li>
-            <a href="faculty.html"
-              ><i class="fa-solid fa-bullhorn"></i> Faculty</a>
-          </li>
-          <li>
-            <a href="welfare.html"><i class="fa-solid fa-calendar"></i> Welfare</a>
-          </li>
-           <li>
-            <a href="announcement.html"
-              ><i class="fa-solid fa-bullhorn"></i> Announcement</a>
-          </li>
-                  <li>
-            <a href="contact.html"
-              ><i class="fa-solid fa-envelope"></i> Contact Us</a>
-          </li>
-         
-        </ul>
-      </div>
-    </nav>
-    <header class="faculty-header">
-      <h1>Faculties and Departments</h1>
-    </header>
-    <p>The University has ten(10) faculties and fifty one (51) academic departments offering a wide range of programmes at Diploma, undergraduate and postgraduate levels. All of them are open to both Government-sponsered and self-sponsered students.</p>
-
-    <ol class="facult-table">
-      <li>
-        <span class="faculty-name">Faculty </span>
-        <span class="dept-count">Number of Departments</span>
-      </li>
-    </ol>
-
-    <table>
-      <thead>
-      <tr>
-        <th>$nbsp</th>
-        <th>Faculty</th>
-        <th>No. of Departments</th>
-      </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="index">1</td>
-          <td>Faculty of Agriculture(FoA)</td>
-          <td class="count">4 Department</td>
-        </tr>
-      </tbody>
-      </table>
+  
+      
+<div class="nav-links">
+  <div class="nav-left">
+    <span class="menu-icon" onclick="openDrawer()">☰</span>
+    <img src="/images/logo.png" alt="Website Logo" class="logo">
+    <div class="title-section">
+    <h1 class="stacked-title">Deans <br><span class="indented" >portal</span></h1>
+    <h2 >Faculty page</h2>
+  </div>
+  </div>
     
-    <script src="script.js"></script>
-</body>
-</html>
+    <div class="top-links">
+        <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="about.html"><i class="fa-solid fa-bullhorn"></i> About Us</a>
+        <a href="faculty.html"><i class="fa-solid fa-bullhorn"></i> Faculty</a>
+        <a href="welfare.html"><i class="fa-solid fa-calendar"></i> Welfare</a>
+        <a href="announcement.html"><i class="fa-solid fa-bullhorn"></i> Announcement</a>
+        <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+    </div>
+</div>
+
+
+<div id="drawer" class="drawer">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeDrawer()">×</a>
+    <h2><u>Menu</u></h2>
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="financialAid.html"><i class="fa-solid fa-sack-dollar"></i> Financial Aid</a>
+    <a href="clubs.html"><i class="fa-solid fa-trophy"></i> Club Management</a>
+    <a href="guidance.html"><i class="fa-solid fa-chalkboard-user"></i> Guidance & Counselling</a>
+    <a href="complaints.html"><i class="fa-solid fa-pen-to-square"></i> Complaints</a>
+    <a href="career.html"><i class="fa-solid fa-briefcase"></i> Career Services</a>
+    <a href="displinary.html"><i class="fa-solid fa-scroll"></i> Disciplinary Measures</a>
+    <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+    <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+</div>
+
+ <header class="header1">
+    <div class="shape circle"></div>
+    <div class="shape square"></div>
+    <div class="shape triangle"></div>
+    
+</header>
+
+
+<div class="intro-slider">
+
+<div class="intro fade">
+ <img src="/images/intro2.png" alt="welcome to our page" class="intro-image">
+ <h1 class="intro-text">Your Journey to success </h1>
+ <button class="intro-button">learn more </button>
+</div>
+
+<div class="intro fade">
+ <img src="images/intro1.png" alt="welcome to our page" class="intro-image">
+ <h1 class="intro-text">Always hear for you</h1>
+ <button class="intro-button">learn more </button>
+</div>
+
+<div class="intro fade">
+ <img src="/images/intro3.png" alt="welcome to our page" class="intro-image">
+ <h1 class="intro-text">Together we stand</h1>
+ <button class="intro-button">learn more </button>
+</div>
+
+ <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+ <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<div style="text-align:center; margin-top:10px;">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+  <div class="page-container">
+    <aside class="sidebar">
+      <h3>Egerton University Dean of Students</h3>
+      <ul>
+        <li>Dean of Students</li>
+        <li>Student Government</li>
+        <li>Student Welfare Services</li>
+        <li>Chaplaincy Services</li>
+        <li>Counselling Section</li>
+        <li>Games and Sports</li>
+        <li>Arts & Cultural Events</li>
+      </ul>
+    </aside>
+    <main class="content-area">
+        <div class="profile-section">
+          <img src="/images/faculty.png" alt="Dean Photo" />
+          <h2>Explaining faculties</h2>
+          <p>Ag. Dean of Students - Egerton University</p>
+        </div>
+
+        <div class="text-box">
+      <h2>About The Office Of The Dean Of Students</h2>
+      <p>
+        The Dean of Students coordinates all the activities of the department and represents the department in the University Senate and other organs of the University. 
+      </p>
+    </div>
+        
+
+        <div class="text-section">
+          <h1>Student Affair Department</h1>
+          <p>
+            The student Affair Department under <br />
+            the Division of Academic Affairs <br />
+            compromises these sections:
+          </p>
+          <ol>
+            <li>
+              Dean of Students Office - <b>Headed by Dean of Students:</b> Dr.
+              Japhet
+            </li>
+            <li>
+              Counselling Section - <b>Headed by Coordinator:</b> Ms. Lydia
+              Langat
+            </li>
+            <li>
+              Sports & Games - <b>Headed by Coordinator:</b> Philip Mwanzia
+            </li>
+            <li>
+              Chaplaincy - <b>HHeaded by University Chaplain:</b> Rev. Dr.
+              Samuel Nduati
+            </li>
+            <li>
+              Leadership Program - <b>Headed by Coordinator:</b> Peter Muthoka
+            </li>
+          </ol>
+        </div>
+      </main>
+    </div>
+
+  
+
+
+  
+  
+    
+  
