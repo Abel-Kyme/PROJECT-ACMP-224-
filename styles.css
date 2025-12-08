@@ -82,7 +82,7 @@ nav img {
 header {
     background-color: var(--primary-green);
     color: white;
-    padding: 20px 20px 10px;
+    padding: 20px 0px 10px;
     text-align: center;
     position: relative;
     overflow: hidden; 
@@ -92,6 +92,9 @@ header h1 {
     font-size: 2em;
     font-weight: 700;
     margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
 }
 
 header p {
@@ -102,6 +105,11 @@ header p {
 
 header img {
     display: flex;
+    width: 100%;
+}
+.welcome h1{
+    text-decoration: underline;
+    text-align: center;
 }
 
 
