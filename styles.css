@@ -953,7 +953,7 @@ body.drawer-open::after {
 
 .footer-section p,
 .footer-section li {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
 }
 
@@ -1003,15 +1003,16 @@ body.drawer-open::after {
 }
 
 .img-txt {
+    font-family: sans-serif;
     position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
+    top: 5%;
+    left: 50%;
+    width: 50%;
     transform: translate(-50%,-50%);
     color: white;
     text-align: top;
-    background: rgba(0, 0, 0, .45);
-    padding: 20px 30px;
+    background: rgba(0, 0, 0, .35);
+    padding: 20px 20px;
     border-radius: 15px;
 }
 
@@ -1023,4 +1024,26 @@ body.drawer-open::after {
 .img-txt {
     margin-top: 10px;
     font-size: 18px;
+}
+
+.about-students{
+    padding: 0 20px;
+}
+
+.about-students h3{
+    padding-top: 25;
+    text-decoration: underline;
+}
+.about-students p{
+    padding-bottom: 20px;
+}
+.service{
+    padding: 0 25px;
+}
+.service h3{
+    padding-top: 15px;
+    text-decoration: underline;
+}
+.service p{
+    padding-top: 20px;
 }
