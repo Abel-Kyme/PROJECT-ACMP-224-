@@ -1,62 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Egerton University Dean of Students' Office</title>
-    <link rel="icon" href="images/egerton logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <linkrel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-    <!-- <script src="interactive.js" defer></script> -->
-  </head>
-  <body>
-    <nav>
-      <a href="index.html"
-        ><img src="images/logo.png" alt="Egerton Logo"/></a>
-      <div class="nav-links">
-        <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
-        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egertons dean's portal</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+     integrity="sha512-xXHlfX41tFe8z2v9D1Y5Zxq9YykhZPMaYlC3aKkC28yrFYm7K3i7r3c1i9W3Zq/OzVjv1C1DfF0Y+Ypsx6H3cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <ul>
-          <li>
-            <a href="home.html"><i class="fa-solid fa-house"></i>Home</a>
-          </li>
-           <li>
-          <a href="about.html"
-              ><i class="fa-solid fa-bullhorn"></i>About Us</a>
-          </li>
-          <li>
-            <a href="faculty.html"
-              ><i class="fa-solid fa-bullhorn"></i>Faculty</a>
-          </li>
-          
-          <li>
-            <a href="welfare.html"><i class="fa-solid fa-calendar"></i>Welfare</a>
-          </li>
-          <li>
-            <a href="announcement.html"
-              ><i class="fa-solid fa-bullhorn"></i>Announcement</a
-            >
-          </li>
-                  <li>
-            <a href="contact.html"
-              ><i class="fa-solid fa-envelope"></i>Contact Us</a
-            >
-          </li>
-          
-        </ul>
-      </div>
-    </nav>
+
+<script src="/interactive.js" defer></script>
+
+</head>
+<body>
+  
+      
+<div class="nav-links">
+  <div class="nav-left">
+    <span class="menu-icon" onclick="openDrawer()">☰</span>
+    <img src="/images/logo.png" alt="Website Logo" class="logo">
+    <div class="title-section">
+    <h1 class="stacked-title"><b><span>Dean of Students Office</span></b></h1>
+  </div>
+  </div>
+    
+    <div class="top-links">
+        <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="about.html"><i class="fa-solid fa-bullhorn"></i> About Us</a>
+        <a href="faculty.html"><i class="fa-solid fa-bullhorn"></i> Faculty</a>
+        <a href="welfare.html"><i class="fa-solid fa-calendar"></i> Welfare</a>
+        <a href="announcement.html"><i class="fa-solid fa-bullhorn"></i> Announcement</a>
+        <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+    </div>
+</div>
+
+
+<div id="drawer" class="drawer">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeDrawer()">×</a>
+    <h2>Menu</h2>
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="financialAid.html"><i class="fa-solid fa-sack-dollar"></i> Financial Aid</a>
+    <a href="clubs.html"><i class="fa-solid fa-trophy"></i> Club Management</a>
+    <a href="guidance.html"><i class="fa-solid fa-chalkboard-user"></i> Guidance & Counselling</a>
+    <a href="complaints.html"><i class="fa-solid fa-pen-to-square"></i> Complaints</a>
+    <a href="career.html"><i class="fa-solid fa-briefcase"></i> Career Services</a>
+    <a href="displinary.html"><i class="fa-solid fa-scroll"></i> Disciplinary Measures</a>
+    <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+    <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+</div>
+
     <header>
-      <h1><b>Dean of Students Office</b></h1>
-      <img src="images/deansOffice.jpg">
-      <p>Supporting students welfare, communication and opportunities.</p>
+      <div class="img-cont">
+         <img src="images/deansOffice.jpg" alt="">
+         <div class="img-txt">
+          <h><b>DEAN OF STUDENTS EGERTON UNIVERSITY</b></h1>
+         </div>
+       </div>     
+      <p>Supporting Students Affairs</p>
+      
     </header>
     <div class="welcome">
     <h1>Welcome to the Dean of Students' Office</h1>
@@ -133,16 +142,42 @@
       <p>The Dean of Students coordinates all the activities of the department and represents the department in the University Senate and other organs of the University</p>
     </div>
 
+    <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Dean of Students Office</h3>
+            <p>
+              Egerton University <br>
+              Supporting Students welfare, leadership and holistic development.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="announcement.html">Announcement</a></li>
+              <li><a href="welfare.html">Student Welfare</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p><i class="fa-solid fa-envelope">E-MAIL: info@egerton.ac.ke</i></p>
+           </div>
+      </div>
+      <div class="footer-bottom">
+        <p>@ 2025 Egerton University. All rights reserved.</p>
+        <a href="#" class="back-to-top">Back to Top ↑</a>
+      </div>
+    </footer>
     
-    <li>
-      <a href="#" id="logout"><i class="fa-solid fa-sign-out"></i> Logout</a>
-    </li>
 
-    &lt;&lt;&lt; &copy; <a href="about.html">Egerton University</a> &gt;&gt;&gt;
 
-    <p>
-      <a href="#">Back to Top</a>
-    </p>
+
+
+
     <script src="script.js"></script>
   </body>
 </html>

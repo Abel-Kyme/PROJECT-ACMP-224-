@@ -1,34 +1,5 @@
-// =========================
-// Navigation Toggle
-// =========================
-document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelector(".nav-links");
-  const menuIcon = document.querySelector(".fa-bars");
-  const closeIcon = document.querySelector(".fa-xmark");
 
-  if (menuIcon && closeIcon && navLinks) {
-    menuIcon.addEventListener("click", () => {
-      navLinks.classList.add("active");
-      menuIcon.style.display = "none";
-      closeIcon.style.display = "block";
-    });
 
-    closeIcon.addEventListener("click", () => {
-      navLinks.classList.remove("active");
-      closeIcon.style.display = "none";
-      menuIcon.style.display = "block";
-    });
-
-    // Auto-close on link click (mobile UX)
-    document.querySelectorAll(".nav-links ul li a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        closeIcon.style.display = "none";
-        menuIcon.style.display = "block";
-      });
-    });
-  }
-});
 function openDrawer() {
   document.getElementById("drawer").style.width = "250px";
   document.body.classList.add("drawer-open");
@@ -39,137 +10,46 @@ function closeDrawer() {
   document.body.classList.remove("drawer-open");
 }
 
-// Close drawer when clicking outside
+
 window.addEventListener("click", function(event) {
   const drawer = document.getElementById("drawer");
   const menuIcon = document.querySelector(".menu-icon");
 
-  // Check if click was outside the drawer and not on the menu icon
+  
   if (drawer.style.width === "250px" && 
       !drawer.contains(event.target) &&
       !menuIcon.contains(event.target)) {
     closeDrawer();
   }
 });
+let slideIndex = 1;
+showSlides(slideIndex);
 
 
-// =========================
-// Register + Login Redirect Logic
-// (Front-End Demo Only)
-// =========================
-document.addEventListener("DOMContentLoaded", () => {
-  const registerForm = document.querySelector(".register-container form");
-  const loginForm = document.querySelector(".login-container form");
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
 
-  // --- Register ---
-  if (registerForm) {
-    registerForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      localStorage.setItem("registered", "true");
-      alert("Registration successful!");
-      window.location.href = "login.html";
-    });
-  }
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
 
-  // --- Login ---
-  if (loginForm) {
-    loginForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const registered = localStorage.getItem("registered");
-      if (registered) {
-        localStorage.setItem("loggedIn", "true");
-        window.location.href = "home.html";
-      } else {
-        alert("Please register first.");
-      }
-    });
-  }
-});
-// =========================
-// Navigation Toggle
-// =========================
-document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelector(".nav-links");
-  const menuIcon = document.querySelector(".fa-bars");
-  const closeIcon = document.querySelector(".fa-xmark");
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("intro");
+    let dots = document.getElementsByClassName("dot");
 
-  if (menuIcon && closeIcon && navLinks) {
-    menuIcon.addEventListener("click", () => {
-      navLinks.classList.add("active");
-      menuIcon.style.display = "none";
-      closeIcon.style.display = "block";
-    });
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
 
-    closeIcon.addEventListener("click", () => {
-      navLinks.classList.remove("active");
-      closeIcon.style.display = "none";
-      menuIcon.style.display = "block";
-    });
+    for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+    for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
 
-    // Auto-close menu when link clicked (mobile)
-    document.querySelectorAll(".nav-links ul li a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        closeIcon.style.display = "none";
-        menuIcon.style.display = "block";
-      });
-    });
-  }
-});
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
 
-// =========================
-// Register + Login Redirect Logic
-// (Front-End Demo Only)
-// =========================
-document.addEventListener("DOMContentLoaded", () => {
-  const registerForm = document.querySelector(".register-container form");
-  const loginForm = document.querySelector(".login-container form");
 
-  // --- Register Page ---
-  if (registerForm) {
-    registerForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      localStorage.setItem("registered", "true");
-      alert("Registration successful!");
-      window.location.href = "login.html";
-    });
-  }
+setInterval(function() { plusSlides(1); }, 5000);
 
-  // --- Login Page ---
-  if (loginForm) {
-    loginForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const registered = localStorage.getItem("registered");
-      if (registered) {
-        localStorage.setItem("loggedIn", "true");
-        alert("Login successful!");
-        window.location.href = "home.html";
-      } else {
-        alert("Please register first.");
-      }
-    });
-  }
-});
-
-// =========================
-// Access Control for Pages
-// =========================
-document.addEventListener("DOMContentLoaded", () => {
-  const loggedIn = localStorage.getItem("loggedIn");
-  const path = window.location.pathname;
-
-  const isLoginPage = path.includes("login.html");
-  const isRegisterPage = path.includes("register.html");
-
-  // Protect Home / Events / Announcements / Contact
-  if (!loggedIn && !isLoginPage && !isRegisterPage) {
-    // If not logged in, send to login page
-    window.location.href = "login.html";
-  }
-
-  // Prevent logged-in users from going back to login/register
-  if (loggedIn && (isLoginPage || isRegisterPage)) {
-    window.location.href = "home.html";
-  }
-});
 
