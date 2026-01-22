@@ -1047,3 +1047,58 @@ body.drawer-open::after {
 .service p{
     padding-top: 20px;
 }
+.about-page {
+    width: 100%;
+    padding: 40px 10%;
+    background: #f7fdf3;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    animation: fadeIn 0.9s ease-out forwards;
+}
+
+.about-page h2 {
+    font-size: 28px;
+    color: #0d6b2f;
+    margin-bottom: 15px;
+    border-left: 5px solid #0d6b2f;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.about.page p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #2c2c2c;
+    margin-bottom: 25px;
+}
+
+.about-page ul{
+    padding-left: 25px;
+    margin: 20px 0;
+}
+
+.about-page ul li{
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+}
+
+.about-page ul li::before{
+    content: "•";
+    color: #0d6b2f;
+    font-weight: bold;
+    margin-right: 6px;
+    position: absolute;
+    left: 18px;
+}
+
+.about-pagealready strong{
+    color: #0d6b2f;
+}
+
+
+@keyframes fadeIn {
+    to{ opacity: 1;}
+}
