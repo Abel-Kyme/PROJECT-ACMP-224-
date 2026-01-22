@@ -101,7 +101,16 @@ document.querySelectorAll('.faculty-header').forEach(header => {
     header.parentElement.classList.toggle('active');
   });
 });
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Thank you! Your message has been sent.");
+  });
 
+  // Toggle live chat
+  function toggleChat() {
+    const chatBox = document.getElementById("chatBox");
+    chatBox.style.display = (chatBox.style.display === "none") ? "block" : "none";
+  }
 
 
 

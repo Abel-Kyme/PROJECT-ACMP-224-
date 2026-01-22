@@ -29,9 +29,9 @@
     <img src="/images/logo.png" alt="Website Logo" class="logo">
     <div class="title-section">
     <h1 class="stacked-title">Deans <br><span class="indented" >portal</span></h1>
-    <h2 >Announcements</h2>
+    <h2 >Announce</h2>
   </div>
-  </div>
+  </div> 
     
     <div class="top-links">
         <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
@@ -48,20 +48,266 @@
     <a href="javascript:void(0)" class="close-btn" onclick="closeDrawer()">×</a>
     <h2>Menu</h2>
     <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
-    <a href="financialAid.html"><i class="fa-solid fa-sack-dollar"></i> Financial Aid</a>
-    <a href="clubs.html"><i class="fa-solid fa-trophy"></i> Club Management</a>
-    <a href="guidance.html"><i class="fa-solid fa-chalkboard-user"></i> Guidance & Counselling</a>
-    <a href="complaints.html"><i class="fa-solid fa-pen-to-square"></i> Complaints</a>
-    <a href="career.html"><i class="fa-solid fa-briefcase"></i> Career Services</a>
-    <a href="displinary.html"><i class="fa-solid fa-scroll"></i> Disciplinary Measures</a>
-    <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
-    <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+        <a href="about.html"><i class="fa-solid fa-bullhorn"></i> About Us</a>
+        <a href="faculty.html"><i class="fa-solid fa-bullhorn"></i> Faculty</a>
+        <a href="welfare.html"><i class="fa-solid fa-calendar"></i> Welfare</a>
+        <a href="announcement.html"><i class="fa-solid fa-bullhorn"></i> Announcement</a>
+        <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a>
 </div>
 
-    <header>
-      <h1>Here are the Announcement</h1>
-    </header>
-    
-    <script src="script.js"></script>
-</body>
+   <header class="announcement-header">
+    <h1>University Announcements & Updates</h1>
+    <p class="header-subtitle">Stay informed about important news, events, and deadlines at Egerton University</p>
+    <div class="announcement-stats">
+        <div class="stat">
+            <i class="fa-solid fa-newspaper"></i>
+            <span>Latest Updates</span>
+        </div>
+        <div class="stat">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Upcoming Events</span>
+        </div>
+        <div class="stat">
+            <i class="fa-solid fa-exclamation-triangle"></i>
+            <span>Important Alerts</span>
+        </div>
+    </div>
+</header>
+
+<div class="announcement-container">
+    <div class="announcement-layout">
+        <div class="main-announcements">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-bullhorn"></i> Latest Announcements</h2>
+                <div class="filter-controls">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Academic</button>
+                    <button class="filter-btn">Administrative</button>
+                    <button class="filter-btn">Events</button>
+                </div>
+            </div>
+
+            <div class="announcement-list">
+                <div class="announcement-card urgent">
+                    <div class="announcement-badge">
+                        <i class="fa-solid fa-exclamation-circle"></i> Urgent
+                    </div>
+                    <div class="announcement-content">
+                        <h3>2024/2025 Academic Year Opening Date</h3>
+                        <p class="announcement-date"><i class="fa-solid fa-calendar"></i> September 9, 2024</p>
+                        <p>All students are required to report on Monday, September 9th, 2024 for the commencement of the 2024/2025 academic year. Registration will take place at respective faculty offices from 8:00 AM to 4:00 PM.</p>
+                        <div class="announcement-tags">
+                            <span class="tag academic">Academic</span>
+                            <span class="tag important">Important</span>
+                        </div>
+                    </div>
+                    <div class="announcement-actions">
+                        <a href="#" class="action-btn"><i class="fa-solid fa-download"></i> Download Notice</a>
+                        <a href="#" class="action-btn"><i class="fa-solid fa-share"></i> Share</a>
+                    </div>
+                </div>
+
+                <div class="announcement-card">
+                    <div class="announcement-badge">
+                        <i class="fa-solid fa-calendar-star"></i> Event
+                    </div>
+                    <div class="announcement-content">
+                        <h3>Career Fair 2024</h3>
+                        <p class="announcement-date"><i class="fa-solid fa-calendar"></i> September 20-21, 2024</p>
+                        <p>The annual Egerton University Career Fair will be held on September 20th-21st at the Main Auditorium. Over 50 companies will be participating. Students are encouraged to prepare their CVs and dress professionally.</p>
+                        <div class="announcement-tags">
+                            <span class="tag event">Event</span>
+                            <span class="tag career">Career</span>
+                        </div>
+                    </div>
+                    <div class="announcement-actions">
+                        <a href="#" class="action-btn"><i class="fa-solid fa-calendar-plus"></i> Add to Calendar</a>
+                        <a href="#" class="action-btn"><i class="fa-solid fa-info-circle"></i> More Info</a>
+                    </div>
+                </div>
+
+                <div class="announcement-card">
+                    <div class="announcement-badge">
+                        <i class="fa-solid fa-money-bill-wave"></i> Financial
+                    </div>
+                    <div class="announcement-content">
+                        <h3>HELB Loan Disbursement Update</h3>
+                        <p class="announcement-date"><i class="fa-solid fa-calendar"></i> September 5, 2024</p>
+                        <p>The Higher Education Loans Board has announced that loan disbursements for continuing students will begin on September 15th, 2024. Ensure all required documents are submitted to the Finance Office by September 10th.</p>
+                        <div class="announcement-tags">
+                            <span class="tag financial">Financial</span>
+                            <span class="tag deadline">Deadline</span>
+                        </div>
+                    </div>
+                    <div class="announcement-actions">
+                        <a href="financialAid.html" class="action-btn"><i class="fa-solid fa-hand-holding-dollar"></i> Financial Aid</a>
+                        <a href="#" class="action-btn"><i class="fa-solid fa-file-pdf"></i> Guidelines</a>
+                    </div>
+                </div>
+
+                <div class="announcement-card">
+                    <div class="announcement-badge">
+                        <i class="fa-solid fa-graduation-cap"></i> Academic
+                    </div>
+                    <div class="announcement-content">
+                        <h3>Examination Timetable Release</h3>
+                        <p class="announcement-date"><i class="fa-solid fa-calendar"></i> August 28, 2024</p>
+                        <p>The examination timetable for the end of semester examinations is now available on the student portal. Students are advised to check their schedules and report any conflicts to their department heads immediately.</p>
+                        <div class="announcement-tags">
+                            <span class="tag academic">Academic</span>
+                            <span class="tag exam">Examination</span>
+                        </div>
+                    </div>
+                    <div class="announcement-actions">
+                        <a href="#" class="action-btn"><i class="fa-solid fa-download"></i> Download Timetable</a>
+                        <a href="#" class="action-btn"><i class="fa-solid fa-question-circle"></i> FAQs</a>
+                    </div>
+                </div>
+
+                <div class="announcement-card">
+                    <div class="announcement-badge">
+                        <i class="fa-solid fa-wrench"></i> Maintenance
+                    </div>
+                    <div class="announcement-content">
+                        <h3>Student Portal Maintenance</h3>
+                        <p class="announcement-date"><i class="fa-solid fa-calendar"></i> August 30, 2024</p>
+                        <p>The student portal will undergo scheduled maintenance on September 1st, 2024 from 10:00 PM to 2:00 AM. Services will be temporarily unavailable during this period. Plan accordingly.</p>
+                        <div class="announcement-tags">
+                            <span class="tag maintenance">Maintenance</span>
+                            <span class="tag notice">Notice</span>
+                        </div>
+                    </div>
+                    <div class="announcement-actions">
+                        <a href="#" class="action-btn"><i class="fa-solid fa-clock"></i> Schedule</a>
+                        <a href="#" class="action-btn"><i class="fa-solid fa-history"></i> Status Updates</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="announcement-sidebar">
+            <div class="sidebar-card">
+                <h3><i class="fa-solid fa-calendar-days"></i> Upcoming Events</h3>
+                <div class="event-list">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">SEP</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Sports Day</h4>
+                            <p>Annual University Sports Competition</p>
+                            <span class="event-time"><i class="fa-solid fa-clock"></i> 9:00 AM - 4:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">20</span>
+                            <span class="month">SEP</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Career Fair</h4>
+                            <p>Meet potential employers</p>
+                            <span class="event-time"><i class="fa-solid fa-clock"></i> 10:00 AM - 5:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">25</span>
+                            <span class="month">SEP</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Cultural Day</h4>
+                            <p>Celebrating diversity on campus</p>
+                            <span class="event-time"><i class="fa-solid fa-clock"></i> 11:00 AM - 7:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="view-all">View All Events <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="sidebar-card">
+                <h3><i class="fa-solid fa-triangle-exclamation"></i> Important Deadlines</h3>
+                <div class="deadline-list">
+                    <div class="deadline-item">
+                        <h4>Fee Payment Deadline</h4>
+                        <p class="deadline-date"><i class="fa-solid fa-calendar-xmark"></i> September 30, 2024</p>
+                        <p class="deadline-desc">Last date for fee payment without penalty</p>
+                    </div>
+                    <div class="deadline-item">
+                        <h4>Course Registration</h4>
+                        <p class="deadline-date"><i class="fa-solid fa-calendar-xmark"></i> October 5, 2024</p>
+                        <p class="deadline-desc">Final date for course registration</p>
+                    </div>
+                    <div class="deadline-item">
+                        <h4>Scholarship Applications</h4>
+                        <p class="deadline-date"><i class="fa-solid fa-calendar-xmark"></i> October 10, 2024</p>
+                        <p class="deadline-desc">University scholarship applications close</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3><i class="fa-solid fa-bell"></i> Subscribe to Updates</h3>
+                <p>Get announcements directly to your email</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+                <div class="notification-options">
+                    <label><input type="checkbox" checked> Academic Updates</label>
+                    <label><input type="checkbox" checked> Event Notifications</label>
+                    <label><input type="checkbox"> Emergency Alerts</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="archive-section">
+        <h2><i class="fa-solid fa-archive"></i> Announcement Archive</h2>
+        <div class="archive-grid">
+            <a href="#" class="archive-item">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span>August 2024</span>
+                <small>12 announcements</small>
+            </a>
+            <a href="#" class="archive-item">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span>July 2024</span>
+                <small>8 announcements</small>
+            </a>
+        </div>
+    </div>
+</div>
+            <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Dean of Students Office</h3>
+            <p>
+              Egerton University <br>
+              Supporting Students welfare, leadership and holistic development.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="announcement.html">Announcement</a></li>
+              <li><a href="welfare.html">Student Welfare</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p><i class="fa-solid fa-envelope">E-MAIL: info@egerton.ac.ke</i></p>
+           </div>
+      </div>
+      <div class="footer-bottom">
+        <p>@ 2025 Egerton University. All rights reserved.</p>
+        <a href="#" class="back-to-top">Back to Top ↑</a>
+      </div>
+    </footer>
+
 </html>

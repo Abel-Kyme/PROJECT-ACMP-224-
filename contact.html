@@ -47,21 +47,107 @@
 <div id="drawer" class="drawer">
     <a href="javascript:void(0)" class="close-btn" onclick="closeDrawer()">×</a>
     <h2>Menu</h2>
-    <a href="/home.html"><i class="fa-solid fa-house"></i> Home</a>
-    <a href="financialAid.html"><i class="fa-solid fa-sack-dollar"></i> Financial Aid</a>
-    <a href="clubs.html"><i class="fa-solid fa-trophy"></i> Club Management</a>
-    <a href="guidance.html"><i class="fa-solid fa-chalkboard-user"></i> Guidance & Counselling</a>
-    <a href="complaints.html"><i class="fa-solid fa-pen-to-square"></i> Complaints</a>
-    <a href="career.html"><i class="fa-solid fa-briefcase"></i> Career Services</a>
-    <a href="displinary.html"><i class="fa-solid fa-scroll"></i> Disciplinary Measures</a>
-    <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
-    <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+    <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="about.html"><i class="fa-solid fa-bullhorn"></i> About Us</a>
+        <a href="faculty.html"><i class="fa-solid fa-bullhorn"></i> Faculty</a>
+        <a href="welfare.html"><i class="fa-solid fa-calendar"></i> Welfare</a>
+        <a href="announcement.html"><i class="fa-solid fa-bullhorn"></i> Announcement</a>
+        <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a>
 </div>
 
-    <header>
-      <h1>Contact the Office of the Dean</h1>
-    </header>
+   
+    <div class="contact-container">
+  <div class="info">
+    <h2>Contact Information</h2>
+    <p><strong>Phone:</strong> <a href="tel:+254-512‑110000 ">+254-512‑110000 </a></p>
+    <p><strong>Email:</strong> <a href="mailto:info@egerton.ac.ke">info@egerton.ac.ke</a></p>
+    <p><strong>Address:</strong> Egerton University, Njoro Campus</p>
+    <p><strong>Hours:</strong> Mon–Fri, 9am–5pm</p>
+  </div>
+
+  <div class="form">
+    <h2> CONTACT US,COMPLEMENTS AND COMPLAINS </h2>
+          <form id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+
+      <label for="inquiry">Inquiry Type</label>
+      <select id="inquiry">
+        <option>Contacting</option>
+        <option>Complementing</option>
+        <option>Complaining</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="chat">
+    <h2>Live Chat</h2>
+    <button onclick="toggleChat()">Open Chat</button>
+    <div id="chatBox" style="display:none; border:1px solid #ccc; padding:10px; margin-top:10px;">
+      <p><strong>Support:</strong> Hi there! How can we help you?</p>
+    </div>
+  </div>
+
+  <div class="social-icons">
+    <h2>Follow Us</h2>
+    <a href="#">Facebook</a> | 
+    <a href="#">Twitter</a> | 
+    <a href="#">LinkedIn</a>
+  </div>
+
+  <div class="trust">
+    <p>We reply within 24 hours.</p>
+    <p>Your information is safe with us.</p>
+  </div>
+
+  <div class="extras">
+    <div class="faq">
+      <a href="#">Visit our FAQ page</a>
+    </div>
+ <h2>We’d love to hear from you!</h2>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Dean of Students Office</h3>
+            <p>
+              Egerton University <br>
+              Supporting Students welfare, leadership and holistic development.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="announcement.html">Announcement</a></li>
+              <li><a href="welfare.html">Student Welfare</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p><i class="fa-solid fa-envelope">E-MAIL: info@egerton.ac.ke</i></p>
+           </div>
+      </div>
+      <div class="footer-bottom">
+        <p>@ 2025 Egerton University. All rights reserved.</p>
+        <a href="#" class="back-to-top">Back to Top ↑</a>
+      </div>
+    </footer>
+
+
     
-    <script src="script.js"></script>
 </body>
 </html>
